@@ -30,9 +30,9 @@ jobs:
 
       - name: Push image
         run: |
-          docker push luskinha/nlw.service.passin.passin:${{ steps.generate_sha.outputs.sha }}
-          docker tag luskinha/nlw.service.passin.passin:${{ steps.generate_sha.outputs.sha }} luskinha/nlw.service.passin.passin:latest
-          docker push luskinha/nlw.service.passin.passin:latest
+          docker push luskinha/nlw.service.passin:${{ steps.generate_sha.outputs.sha }}
+          docker tag luskinha/nlw.service.passin:${{ steps.generate_sha.outputs.sha }} luskinha/nlw.service.passin:latest
+          docker push luskinha/nlw.service.passin:latest
 
       - name: Update image tag
         uses: fjogeleit/yaml-update-action@main
